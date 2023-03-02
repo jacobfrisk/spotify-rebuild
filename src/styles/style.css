@@ -5,6 +5,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: system-ui;
 }
 
 /* 2. Remove default margin and padding */
@@ -54,7 +55,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  max-width: 65ch;
+  /* max-width: 65ch; */
   line-height: 1.6;
 }
 /* 9. Create a root stacking context */
@@ -98,4 +99,20 @@ body {
   /* BORDER-RADIUS */
   --btn-border-radius: 500px;
   --card-border-radius: 0.5rem;
+}
+
+nav {
+  background-color: var(--primary-900);
+}
+
+.logo {
+  width: 130px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.top-bar-main {
+  width: 100%;
 }

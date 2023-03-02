@@ -8,28 +8,29 @@ const { variant, size } = Astro.props;
   button {
     padding: 1rem;
     border-radius: 0.5rem;
+        border-color: transparent;
   }
 
   .primary {
-    background-color: blue;
-    color: white;
-  }
-
-  .secondary {
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     color: black;
-    background-color: antiquewhite;
-  }
-
-  .small {
+    background-color: white;
+    border-radius: 500px;
+    gap: 0.3rem;
+    border: 0.5px solid grey;
+    font-weight: 600;
     font-size: 1rem;
   }
 
-  .medium {
-    font-size: 1.5rem;
-  }
-
-  .large {
-    font-size: 2rem;
+  .secondary {
+    padding: 0.3rem 1rem;
+    color: white;
+    background-color: transparent;
+    border-radius: 500px;
+    display: flex;
+    place-items: center;
+    gap: 0.3rem;
+    border: 0.5px solid grey;
+    font-size: 0.8rem;
   }
 </style>

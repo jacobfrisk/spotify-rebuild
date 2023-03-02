@@ -1,15 +1,35 @@
 ---
-const { header } = Astro.props;
+const { header, description } = Astro.props;
 ---
 
 <article>
-  <h2>{header}</h2>
-  <p>Kortere lorem ipsum</p>
-  <slot />
+  <slot name="peaceful_piano"></slot>
+    <h2>{header}</h2>
+    <p>{description}</p>
 </article>
 
 <style>
-  p {
-    color: royalblue;
+
+  h2 {
+    color: white;
+    font-size: 1rem;
   }
+  p {
+    color: grey;
+    font-size: 0.8rem;
+  }
+
+  article {
+    max-width: 250px;
+    background-color: hsl(0, 0%, 14%);
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+article h2, p {
+  margin-top: 1rem;
+}
+.card-text > * {
+  margin-top: 0.5rem;
+}
 </style>
