@@ -17,7 +17,6 @@ const { variant, size } = Astro.props;
     background-color: white;
     border-radius: 500px;
     gap: 0.3rem;
-    border: 1px solid grey;
     font-weight: 600;
     font-size: 1rem;
     transition: 100ms all ease-in;
@@ -37,15 +36,13 @@ const { variant, size } = Astro.props;
   }
 
   .primary:hover {
-    color: white;
-    background-color: black;
     transition: 100ms all ease-in;
     scale: 1.05;
     cursor: pointer;
   }
 
   .secondary:hover {
-    scale: 1.1;
+    scale: 1.05;
     border: 1px solid white;
     transition: 100ms ease-in;
     cursor: pointer;
