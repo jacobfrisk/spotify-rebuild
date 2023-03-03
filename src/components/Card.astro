@@ -1,18 +1,21 @@
 ---
+import "../styles/style.css";
 const { header, description } = Astro.props;
 ---
 
-<article>
-  <slot name="peaceful_piano"></slot>
+<a href="#">
+  <article>
+    <slot name="peaceful_piano" />
     <h2>{header}</h2>
     <p>{description}</p>
-</article>
+    <img class="play-icon" src="img/playicon.png" alt="" />
+  </article>
+</a>
 
 <style>
-
   h2 {
-    color: white;
     font-size: 1rem;
+    color: var(--text-900);
   }
   p {
     color: grey;
@@ -24,12 +27,39 @@ const { header, description } = Astro.props;
     background-color: hsl(0, 0%, 14%);
     border-radius: 5px;
     padding: 1rem;
+    transition: 100ms all ease-out;
+    position: relative;
   }
 
-article h2, p {
-  margin-top: 1rem;
-}
-.card-text > * {
-  margin-top: 0.5rem;
-}
+  article:hover {
+    background-color: hsl(0, 0%, 18%);
+    transition: 100ms all ease-out;
+  }
+
+  article:hover .playicon {
+    display: block;
+  }
+
+  article h2,
+  p {
+    margin-top: 1rem;
+  }
+  .card-text > * {
+    margin-top: 0.5rem;
+  }
+
+  article:hover .play-icon {
+    opacity: 1;
+    transition: 200ms all ease-in;
+    transform: translateY(-10%);
+  }
+
+  .play-icon {
+    opacity: 0;
+    width: 3rem;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transition: 200ms all ease-in;
+  }
 </style>

@@ -1,28 +1,57 @@
 ---
-import "../styles/style.css";
 import Button from "./Button.astro";
+const { hasSearchField } = Astro.props;
 ---
 
 <aside>
-    <slot name="arrow"></slot>
-    <div class="log-on-sign-up">
-        <a href="#">Tilmeld dig</a>
-        <Button variant="primary">Log på</Button>
-    </div>
+  <div class="search">
+    <svg class="back-arrow" slot="arrow" role="img" height="16" width="16" aria-hidden="true" class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16" data-encore-id="icon"
+      ><path fill="grey" d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path></svg
+    >
+    {hasSearchField && <input type="text" placeholder="Hvad vil du lytte til?" />}
+  </div>
+  <div class="log-on-sign-up">
+    <a class="sign-up-link" href="#">Tilmeld dig</a>
+    <Button variant="primary">Log på</Button>
+  </div>
 </aside>
 
 <style>
-    aside {
-        padding: 1rem 2rem;
-        display: flex;
-        place-items: center;
-        justify-content: space-between;
-        background-color: hsl(0, 0%, 5%);
-    }
+  aside {
+    padding: 1rem 2rem;
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 5%);
+    font-size: 0.9rem;
+  }
 
-    .log-on-sign-up a {
+  .log-on-sign-up a {
     margin-right: 2rem;
     font-weight: 500;
     color: grey;
-    }
+  }
+
+  .back-arrow {
+    transition: 150ms all ease-in;
+  }
+
+  .back-arrow:hover,
+  a:hover {
+    scale: 1.2;
+    transition: 150ms all ease-in;
+    cursor: pointer;
+  }
+
+  input {
+    border-radius: 500px;
+    padding: 0.5rem 1rem;
+    border-color: transparent;
+  }
+
+  .search {
+    display: flex;
+    place-items: center;
+    gap: 3rem;
+  }
 </style>

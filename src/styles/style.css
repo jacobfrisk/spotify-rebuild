@@ -73,7 +73,7 @@ ul {
 }
 
 /* 11. Make footer stick to bottom */
-body {
+.wrapper {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -115,4 +115,27 @@ nav {
 
 .top-bar-main {
   width: 100%;
+}
+
+main {
+  background: linear-gradient(#1f1f1f 0, #121212 100%) 0 0 / 100% 20rem no-repeat, #121212;
+}
+
+.card-container {
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card-container:last-of-type {
+  padding-bottom: 5rem;
+}
+
+.header {
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 1rem;
+  color: white;
 }

@@ -8,7 +8,7 @@ const { variant, size } = Astro.props;
   button {
     padding: 1rem;
     border-radius: 0.5rem;
-        border-color: transparent;
+    border-color: transparent;
   }
 
   .primary {
@@ -17,9 +17,10 @@ const { variant, size } = Astro.props;
     background-color: white;
     border-radius: 500px;
     gap: 0.3rem;
-    border: 0.5px solid grey;
+    border: 1px solid grey;
     font-weight: 600;
     font-size: 1rem;
+    transition: 100ms all ease-in;
   }
 
   .secondary {
@@ -32,5 +33,21 @@ const { variant, size } = Astro.props;
     gap: 0.3rem;
     border: 0.5px solid grey;
     font-size: 0.8rem;
+    transition: 100ms ease-in;
+  }
+
+  .primary:hover {
+    color: white;
+    background-color: black;
+    transition: 100ms all ease-in;
+    scale: 1.05;
+    cursor: pointer;
+  }
+
+  .secondary:hover {
+    scale: 1.1;
+    border: 1px solid white;
+    transition: 100ms ease-in;
+    cursor: pointer;
   }
 </style>
